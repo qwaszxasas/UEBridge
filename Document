@@ -1,0 +1,13 @@
+Most resources of this plugin will be marked and can be renamed/moved
+resource logo
+UE documents are managed by users, and resources (such as static mesh) are assigned a unique ID and stored in the '/Game/UEBridge/UEBridge/objinfo.objinfo' object, and support resource renaming and moving operations (deleting '/Game/UEBridge/UEBridge/objinfo.objinfo' ' will cause the reference to be lost)
+bl documents are managed by users, and resources (such as asset:static mesh) are assigned unique IDs and stored in the bpy.data.node_groups["objinfo"] object. Rename and move operations of resources are supported (deleting bpy.data.node_groups["objinfo"] will resulting in lost references)
+The ps document is assigned a unique ID folder, which is stored in the C:\Users\{youusername}\AppData\Roaming\UEBridge\setting.ini file specified by the ps_path property item
+The pt document is assigned a unique ID folder, which is stored in the C:\Users\{youusername}\AppData\Roaming\UEBridge\setting.ini file specified by the pt_path attribute item
+
+
+C:\Users\{youusername}\AppData\Roaming\UEBridge\setting.ini properties
+The port_start attribute item specifies the socket port used by this plug-in (it can be changed if the port is occupied)
+
+The cache_path attribute item specifies the cache directory by. The files in this folder will be emptied periodically to save the files required by the plugin to exchange resources, such as fbx gitf png
+The pt_shortcut property specifies the shortcut key used by substance painter,
